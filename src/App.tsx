@@ -1,6 +1,9 @@
 import Layout from "./component/common/layout/Layout";
 import Home from "./pages";
 import { Route, Routes } from "react-router-dom";
+import Auth from "./pages/auth";
+import Blog from "./pages/blogs";
+import Shop from "./pages/shop";
 
 const App = () => {
   return (
@@ -17,7 +20,7 @@ const App = () => {
         path="/blogs"
         element={
           <Layout>
-            <Home />
+            <Blog />
           </Layout>
         }
       />
@@ -25,7 +28,15 @@ const App = () => {
         path="/shop"
         element={
           <Layout>
-            <Home />
+            <Shop />
+          </Layout>
+        }
+      />
+      <Route
+        path="auth"
+        element={
+          <Layout>
+            <Auth />
           </Layout>
         }
       />
